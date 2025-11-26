@@ -152,6 +152,7 @@ def execute_research(query: str, config: Settings):
         # 处理段落
         total_paragraphs = len(agent.state.paragraphs)
         for i in range(total_paragraphs):
+            print(f"Processing paragraph =======> {i + 1}/{total_paragraphs}: {agent.state.paragraphs[i].title}")
             status_text.text(f"正在处理段落 {i + 1}/{total_paragraphs}: {agent.state.paragraphs[i].title}")
 
             # 初始搜索和总结
@@ -165,6 +166,8 @@ def execute_research(query: str, config: Settings):
 
             progress_value = 20 + (i + 1) / total_paragraphs * 60
             progress_bar.progress(int(progress_value))
+            print(f"Completed paragraph =======> {i + 1}/{total_paragraphs}: {agent.state.paragraphs[i].title}")
+
 
         # 生成最终报告
         status_text.text("正在生成最终报告...")
