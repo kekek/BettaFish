@@ -12,7 +12,7 @@ services:
       - STREAMLIT_SERVER_ENABLE_FILE_WATCHER=false
       - timezone=Asia/Shanghai
     ports:
-      - "5050:5000"
+      - "5050:5050"
       - "8501:8501"
       - "8502:8502"
       - "8503:8503"
