@@ -1275,14 +1275,14 @@
             updateTime();
             setInterval(updateTime, 1000);
             checkStatus();
-            setInterval(checkStatus, 5000);
+            setInterval(checkStatus, 30000);
             
             // 初始化密码切换功能（事件委托，只需调用一次）
             attachConfigPasswordToggles();
             
             // 初始化Report Engine锁定状态检查
             checkReportLockStatus();
-            reportLockCheckInterval = setInterval(checkReportLockStatus, 10000); // 每10秒检查一次
+            reportLockCheckInterval = setInterval(checkReportLockStatus, 30000); // 每10秒检查一次
             
             // 定期刷新控制台输出
             setInterval(() => {
